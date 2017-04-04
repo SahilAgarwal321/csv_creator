@@ -3,16 +3,17 @@ from config import headers, rows, files, names, surnames, subjects, categories, 
 
 
 class csv_file_creator(object):
-    """Class that contains attributes and methods to create csv file. \n
-    Attributes : \n
-        headers : CSV File Headers \n
-        n : number of rows \n
-        m : number of files \n
-        names : list of names \n
-        surnames : list of surnames \n
-        subjects : list of subjects \n
-        categories : list of categories \n
-        filename : file name format
+    """
+        Class that contains attributes and methods to create csv file. \n
+        Attributes : \n
+            headers : CSV File Headers \n
+            n : number of rows \n
+            m : number of files \n
+            names : list of names \n
+            surnames : list of surnames \n
+            subjects : list of subjects \n
+            categories : list of categories \n
+            filename : file name format
     """
     def __init__(self, headers, rows, files, names, surnames, subjects, categories, filename):
         self.headers = headers
@@ -26,14 +27,18 @@ class csv_file_creator(object):
         self.max_score = rows * files
 
     def create_files(self):
-        '''Writes to files
+        '''
+            Writes to multiple files.
         '''
         for j in xrange(self.files):
             self.create_file(j)
         self.print_message()
 
     def create_file(self, j):
-        '''Write to file
+        '''
+            Writes to single file.
+            Edit this function to change headers and format of rows.
+            j : file number being written.
         '''
         n = self.rows
         m = self.files
@@ -44,7 +49,8 @@ class csv_file_creator(object):
 
 
     def print_message(self):
-        '''Prints status message to system
+        '''
+            Prints status message to system.
         '''
         print "{0} CSV files created with {1} rows per file.".format(self.files, self.rows)
         print "Total rows = {}".format(self.max_score)
