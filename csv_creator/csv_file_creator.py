@@ -52,9 +52,9 @@ class csv_file_creator(object):
         '''
             Prints status message to system.
         '''
-        print "{0} CSV files created with {1} rows per file.".format(self.files, self.rows)
-        print "Total rows = {}".format(self.max_score)
-        print "Names = {} \nSurnames = {} \nSubjects = {} \nCategories = {}".format(self.names, self.surnames, self.subjects, self.categories)
+        print ">> {0} CSV files created with {1} rows per file.".format(self.files, self.rows)
+        print ">> Total rows = {}".format(self.max_score)
+        print ">> Names = {0} \n>> Surnames = {1} \n>> Subjects = {2} \n>> Categories = {3}".format(self.names, self.surnames, self.subjects, self.categories)
 
 
 if __name__ == '__main__':
